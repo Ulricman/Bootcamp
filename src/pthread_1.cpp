@@ -58,6 +58,8 @@ int main() {
   }
 
   // Clean up attributes.
+  // The `pthread_attr_t` object becomes invalid can cannot be reused unless
+  // reinitialized.
   pthread_attr_destroy(&attr);
 
   // Wait for the thread to finish.
